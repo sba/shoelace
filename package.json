@@ -41,7 +41,7 @@
     "url": "https://github.com/sponsors/claviska"
   },
   "scripts": {
-    "start": "node scripts/build.js --bundle --serve",
+    "start": "node scripts/build.js --bundle --serve --copydir \"docs-astro/public/shoelace\"",
     "build": "node scripts/build.js --bundle --types --copydir \"docs/dist\"",
     "verify": "npm run prettier:check && npm run lint && npm run build && npm run test",
     "prepublishOnly": "npm run verify",

@@ -280,6 +280,9 @@ export default class SlButton extends ShoelaceElement implements ShoelaceFormCon
       >
         <slot name="prefix" part="prefix" class="button__prefix"></slot>
         <slot part="label" class="button__label"></slot>
+
+        CHANGE THIS LINE AND SAVE
+
         <slot name="suffix" part="suffix" class="button__suffix"></slot>
         ${
           this.caret ? html` <sl-icon part="caret" class="button__caret" library="system" name="caret"></sl-icon> ` : ''
