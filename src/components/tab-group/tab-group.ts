@@ -345,6 +345,12 @@ export default class SlTabGroup extends ShoelaceElement {
 
   /** Shows the specified tab panel. */
   show(panel: string) {
+    // Wait for the first update to complete before executing
+    if (!this.hasUpdated) {
+      this.updateComplete.then(() => this.show(panel));
+      return;
+    }
+
     const tab = this.tabs.find(el => el.panel === panel);
 
     if (tab) {
